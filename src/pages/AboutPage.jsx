@@ -1,14 +1,6 @@
-interface ObjectiveItemProps {
-  number: string;
-  text: string;
-}
+import React from "react";
 
-interface PartnerCardProps {
-  name: string;
-  role: string;
-}
-
-const ObjectiveItem = ({ number, text }: ObjectiveItemProps) => (
+const ObjectiveItem = ({ number, text }) => (
   <div className="group flex items-start gap-4 p-6 border border-gray-200 rounded-xl hover:border-indigo-500 transition-all duration-300 bg-white hover:shadow-lg transform hover:-translate-y-1 animate-fade-in-up">
     <span className="text-4xl font-bold text-indigo-600 group-hover:scale-110 transition-transform duration-300">
       {number}
@@ -19,7 +11,7 @@ const ObjectiveItem = ({ number, text }: ObjectiveItemProps) => (
   </div>
 );
 
-const PartnerCard = ({ name, role }: PartnerCardProps) => (
+const PartnerCard = ({ name, role }) => (
   <div className="group border border-gray-200 rounded-xl p-6 bg-white hover:border-indigo-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-scale-in">
     <div className="w-12 h-12 rounded-lg bg-indigo-600 mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
       <span className="text-white font-bold">{name.charAt(0)}</span>
@@ -159,10 +151,7 @@ export const AboutPage = () => {
                 name="KOICA"
                 role="Korea International Cooperation Agency"
               />
-              <PartnerCard
-                name="Kathmandu University"
-                role="Host Institution"
-              />
+              <PartnerCard name="Kathmandu University" role="Host Institution" />
               <PartnerCard name="JBNU" role="Jeonbuk National University" />
               <PartnerCard name="STEPI" role="Project Management Consulting" />
             </div>

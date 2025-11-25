@@ -1,17 +1,6 @@
 import nticLogo from "../img/NTIC-logo.png";
 
-interface HeaderProps {
-  currentPage: string;
-  navigateTo: (page: string) => void;
-}
-
-interface NavLinkProps {
-  onClick: () => void;
-  active: boolean;
-  children: React.ReactNode;
-}
-
-const NavLink = ({ onClick, active, children }: NavLinkProps) => (
+const NavLink = ({ onClick, active, children }) => (
   <button
     onClick={onClick}
     className={`relative font-medium transition-all duration-300 cursor-pointer px-3 py-2 rounded-lg ${
@@ -27,14 +16,13 @@ const NavLink = ({ onClick, active, children }: NavLinkProps) => (
   </button>
 );
 
-export const Header = ({ currentPage, navigateTo }: HeaderProps) => {
-  const isActive = (page: string) => currentPage === page;
+export const Header = ({ currentPage, navigateTo }) => {
+  const isActive = (page) => currentPage === page;
 
   return (
     <header className="border-b border-sky-200 bg-sky-100 sticky top-0 z-50 shadow-sm">
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* 👇 Updated NTIC button with image */}
           <button
             onClick={() => navigateTo("home")}
             className="flex items-center gap-4 text-6xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors duration-300 cursor-pointer"

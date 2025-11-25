@@ -10,7 +10,7 @@ import { JobsPage } from './pages/JobsPage';
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
-  const navigateTo = (page: string) => {
+  const navigateTo = (page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -44,6 +44,3 @@ const App = () => {
 };
 
 export default App;
-
-
-

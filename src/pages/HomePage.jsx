@@ -1,23 +1,5 @@
-interface HomePageProps {
-  navigateTo: (page: string) => void;
-}
-
-interface FocusCardProps {
-  title: string;
-  description: string;
-  delay?: number;
-  color?: string;
-  image?: string;
-}
-
-const FocusCard = ({
-  title,
-  description,
-  delay = 0,
-  color = "indigo",
-  image,
-}: FocusCardProps) => {
-  const colorClasses: Record<string, string> = {
+const FocusCard = ({ title, description, delay = 0, color = "indigo", image }) => {
+  const colorClasses = {
     indigo: "bg-indigo-600 hover:bg-indigo-700 border-indigo-600",
     green: "bg-green-600 hover:bg-green-700 border-green-600",
     blue: "bg-blue-600 hover:bg-blue-700 border-blue-600",
@@ -35,7 +17,7 @@ const FocusCard = ({
             alt={title}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
+              e.target.style.display = "none";
             }}
           />
         </div>
@@ -55,14 +37,7 @@ const FocusCard = ({
   );
 };
 
-interface WhyNticItem {
-  title: string;
-  description: string;
-  bullets?: string[];
-  image: string;
-}
-
-const whyNticItems: WhyNticItem[] = [
+const whyNticItems = [
   {
     title: "🧠 1. Research-driven Innovation",
     description:
@@ -138,26 +113,22 @@ const whyNticItems: WhyNticItem[] = [
   },
 ];
 
-export const HomePage = ({ navigateTo }: HomePageProps) => {
+export const HomePage = ({ navigateTo }) => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Image/Video */}
-      {/* Hero Section with Background Video */}
+      {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center bg-gray-900 text-white">
-        {/* 🔹 Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="/public/NTIC-video.mp4" // <-- YOUR VIDEO PATH HERE
+          src="/public/NTIC-video.mp4"
           autoPlay
           loop
           muted
           playsInline
         />
 
-        {/* 🔹 Dark Overlay (optional but makes text readable) */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* 🔹 Hero Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
@@ -165,9 +136,8 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
                 Nepal Technology Innovation Center
               </h1>
               <p className="text-xl mb-8 leading-relaxed">
-                Building Nepal's future through research, innovation, and
-                entrepreneurship. Empowering rural communities with cutting-edge
-                technology and sustainable solutions.
+                Building Nepal's future through research, innovation, and entrepreneurship.
+                Empowering rural communities with cutting-edge technology and sustainable solutions.
               </p>
               <div className="flex gap-4">
                 <button
@@ -184,21 +154,18 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
                 </button>
               </div>
             </div>
-
-            {/* You can remove this image section if you want pure video */}
           </div>
         </div>
       </section>
 
       {/* Why NTIC Section */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-          Why NTIC
-        </h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Why NTIC</h2>
         <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-          Purpose-built programs, labs, and mentors help our students transform
-          ideas into high-impact solutions for Nepal.
+          Purpose-built programs, labs, and mentors help our students transform ideas into
+          high-impact solutions for Nepal.
         </p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {whyNticItems.map((item, idx) => (
             <article
@@ -212,17 +179,14 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
                   alt={item.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
+                    e.target.style.display = "none";
                   }}
                 />
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {item.description}
-                </p>
+                <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{item.description}</p>
+
                 {item.bullets && (
                   <ul className="space-y-2 text-gray-700">
                     {item.bullets.map((bullet) => (
@@ -242,9 +206,8 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
       {/* Video Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Watch Our Story
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Watch Our Story</h2>
+
           <div
             className="relative rounded-xl overflow-hidden shadow-xl animate-fade-in-up"
             style={{ aspectRatio: "16/9" }}
@@ -266,9 +229,9 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
           Our Focus Areas
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          We focus on key areas that drive innovation and sustainable
-          development in Nepal
+          We focus on key areas that drive innovation and sustainable development in Nepal
         </p>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FocusCard
             title="Agriculture & Rural Development"
@@ -294,37 +257,29 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
         </div>
       </section>
 
-      {/* Image Gallery Section */}
+      {/* Image Gallery */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Our Facilities
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Facilities</h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div
-              className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up"
-              style={{ animationDelay: "0ms" }}
-            >
+            <div className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up" style={{ animationDelay: "0ms" }}>
               <img
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
                 alt="Research Lab"
                 className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <div
-              className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up"
-              style={{ animationDelay: "100ms" }}
-            >
+
+            <div className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up" style={{ animationDelay: "100ms" }}>
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop"
                 alt="Innovation Center"
                 className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <div
-              className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up"
-              style={{ animationDelay: "200ms" }}
-            >
+
+            <div className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up" style={{ animationDelay: "200ms" }}>
               <img
                 src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=300&fit=crop"
                 alt="Workspace"
@@ -335,15 +290,14 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* CTA */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-gray-600 mb-8">
             Join us in building Nepal's technological future
           </p>
+
           <div className="flex gap-4 justify-center">
             <button
               onClick={() => navigateTo("programs")}
@@ -351,6 +305,7 @@ export const HomePage = ({ navigateTo }: HomePageProps) => {
             >
               View Programs
             </button>
+
             <button
               onClick={() => navigateTo("contact")}
               className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-medium hover:bg-indigo-600 hover:text-white transition-colors cursor-pointer"

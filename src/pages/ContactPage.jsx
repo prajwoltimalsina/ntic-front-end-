@@ -1,14 +1,6 @@
-interface ContactItemProps {
-  title: string;
-  content: string | React.ReactNode;
-}
+import React from "react";
 
-interface QuickLinkProps {
-  text: string;
-  url: string;
-}
-
-const ContactItem = ({ title, content }: ContactItemProps) => (
+const ContactItem = ({ title, content }) => (
   <div className="group flex gap-4 p-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 animate-fade-in-up">
     <div className="w-1 h-12 bg-indigo-600 rounded group-hover:scale-y-110 transition-transform"></div>
     <div className="flex-1">
@@ -22,7 +14,7 @@ const ContactItem = ({ title, content }: ContactItemProps) => (
   </div>
 );
 
-const QuickLink = ({ text, url }: QuickLinkProps) => (
+const QuickLink = ({ text, url }) => (
   <a
     href={url}
     target="_blank"
@@ -89,8 +81,8 @@ export const ContactPage = () => {
                 title="Phone"
                 content={
                   <div className="space-y-1">
-                    <div>Mobile: +977-9820114518</div>
-                    <div>Landline: +977-11-415100/415200 Ext: 4651</div>
+                    <div>Mobile: +977</div>
+                    <div>Landline: +</div>
                   </div>
                 }
               />

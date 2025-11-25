@@ -1,17 +1,6 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
-interface JobPosting {
-  id: number;
-  title: string;
-  type: "Job" | "Internship";
-  department: string;
-  location: string;
-  description: string;
-  deadline: string;
-  tags: string[];
-}
-
-const jobPostings: JobPosting[] = [
+const jobPostings = [
   {
     id: 1,
     title: "AI Research Fellow",
@@ -104,15 +93,14 @@ export const JobsPage = () => {
         job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         job.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         job.tags.some((tag) =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase()),
+          tag.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
       const matchesLocation =
         selectedLocation === "All Locations" || job.location === selectedLocation;
 
       const matchesDepartment =
-        selectedDepartment === "All Departments" ||
-        job.department === selectedDepartment;
+        selectedDepartment === "All Departments" || job.department === selectedDepartment;
 
       const matchesType =
         selectedType === "All Opportunities" || job.type === selectedType;
@@ -256,4 +244,3 @@ export const JobsPage = () => {
     </div>
   );
 };
-

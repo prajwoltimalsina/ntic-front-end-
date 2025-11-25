@@ -1,16 +1,7 @@
+import React from "react";
 
-interface ProgramsPageProps {
-  navigateTo: (page: string) => void;
-}
-
-interface ProgramCardProps {
-  title: string;
-  description: string;
-  highlights: string[];
-}
-
-const ProgramCard = ({ title, description, highlights, delay = 0 }: ProgramCardProps & { delay?: number }) => (
-  <div 
+const ProgramCard = ({ title, description, highlights, delay = 0 }) => (
+  <div
     className="group relative overflow-hidden border border-gray-200 rounded-xl p-8 bg-white hover:border-indigo-500 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 animate-fade-in-up"
     style={{ animationDelay: `${delay}ms` }}
   >
@@ -33,7 +24,7 @@ const ProgramCard = ({ title, description, highlights, delay = 0 }: ProgramCardP
   </div>
 );
 
-export const ProgramsPage = ({ navigateTo }: ProgramsPageProps) => {
+export const ProgramsPage = ({ navigateTo }) => {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
@@ -140,4 +131,3 @@ export const ProgramsPage = ({ navigateTo }: ProgramsPageProps) => {
     </div>
   );
 };
-
