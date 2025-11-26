@@ -29,7 +29,7 @@ export const ProgramsPage = ({ navigateTo }) => {
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="animate-fade-in-up">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Programs</h1>
+          <h1 className="text-5xl font-bold text-blue-700 mb-6">Our Programs</h1>
           <p className="text-xl text-gray-700 mb-12 max-w-3xl">
             NTIC operates seven cross-cutting functional programs designed to drive innovation 
             and sustainable development across Nepal's rural communities.

@@ -97,7 +97,7 @@ const whyNticItems = [
       "Telemedicine deployments in remote regions",
     ],
     image:
-      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=400&fit=crop",
+      "national-impact.png",
   },
   {
     title: "🧑‍🏫 6. Mentorship from Experts & Researchers",
@@ -136,8 +136,8 @@ export const HomePage = ({ navigateTo }) => {
                 Nepal Technology Innovation Center
               </h1>
               <p className="text-xl mb-8 leading-relaxed">
-                Building Nepal's future through research, innovation, and entrepreneurship.
-                Empowering rural communities with cutting-edge technology and sustainable solutions.
+                “The research of today is the technology of tomorrow”
+                NTIC create a transforming innovation resource Center
               </p>
               <div className="flex gap-4">
                 <button
@@ -160,7 +160,7 @@ export const HomePage = ({ navigateTo }) => {
 
       {/* Why NTIC Section */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Why NTIC</h2>
+        <h2 className="text-4xl font-bold text-blue-700 mb-4 text-center">Why NTIC</h2>
         <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
           Purpose-built programs, labs, and mentors help our students transform ideas into
           high-impact solutions for Nepal.
@@ -206,7 +206,7 @@ export const HomePage = ({ navigateTo }) => {
       {/* Video Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Watch Our Story</h2>
+          <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center">Watch Our Story</h2>
 
           <div
             className="relative rounded-xl overflow-hidden shadow-xl animate-fade-in-up"
@@ -223,9 +223,33 @@ export const HomePage = ({ navigateTo }) => {
         </div>
       </section>
 
+      {/* Organogram of NTIC*/}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-blue-700 mb-4 text-center animate-fade-in-up">
+          Organogram of NTIC
+        </h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Understanding the structure and hierarchy of NTIC
+        </p>
+        
+        
+          
+  {/* Image */}
+  <div className="flex justify-center">
+    <img
+      src="public\Organogram_NTIC.png"      
+      alt="Organogram of NTIC"
+      className="w-full max-w-4xl rounded-lg shadow-lg"
+    />
+  </div>
+</section>
+        
+
+
+
       {/* Focus Areas */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center animate-fade-in-up">
+        <h2 className="text-4xl font-bold text-blue-700 mb-4 text-center animate-fade-in-up">
           Our Focus Areas
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -257,10 +281,12 @@ export const HomePage = ({ navigateTo }) => {
         </div>
       </section>
 
+      
+
       {/* Image Gallery */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Facilities</h2>
+          <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center">Our Facilities</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up" style={{ animationDelay: "0ms" }}>

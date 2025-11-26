@@ -69,6 +69,21 @@ export const AboutPage = () => {
           </section>
 
           <section
+           className="mb-12 bg-indigo-50 p-8 rounded-xl border-l-4 border-indigo-600 animate-fade-in-up"
+            style={{ animationDelay: "200ms" }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Collaborative Team
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              To become Nepal's leading Technology Innovation Platform by
+              bridging the gap between research and applicable technology,
+              enabling Nepal to address critical research needs and compete in
+              the global innovation landscape.
+            </p>
+          </section>
+
+          <section
             className="mb-12 animate-fade-in-up"
             style={{ animationDelay: "300ms" }}
           >
