@@ -10,6 +10,17 @@ body {
 font-family: 'NotoSans_semibold_online_security'
 } */
 
+
+/* Drop donw animation */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.25s ease-out;
+}
+
 @layer base {
   * {
     @apply transition-all duration-300;
@@ -156,5 +167,6 @@ font-family: 'NotoSans_semibold_online_security'
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #4f46e5, #7c3aed);
   }
+  
 }
 

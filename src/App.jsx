@@ -6,6 +6,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ProgramsPage } from './pages/ProgramsPage';
 import { ContactPage } from './pages/ContactPage';
 import { JobsPage } from './pages/JobsPage';
+import{ NTICFamilyPage } from './pages/NTICFamilyPage';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -27,6 +28,8 @@ const App = () => {
         return <ContactPage />;
       case 'jobs':
         return <JobsPage />;
+        case 'ntic-family':
+          return <NTICFamilyPage navigateTo={navigateTo} />;
       default:
         return <HomePage navigateTo={navigateTo} />;
     }

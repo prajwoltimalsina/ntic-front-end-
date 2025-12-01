@@ -4,10 +4,16 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {},
+   theme: {
+    extend: {
+      colors: {
+        primary: "#8c3437",       // Main brand color (blue)
+        primaryLight: "#d48f91",  // Light variant
+        secondary: "#347d6c",     // Accent color (green)
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
 
 

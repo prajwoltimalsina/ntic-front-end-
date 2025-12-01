@@ -118,12 +118,26 @@ export const ContactPage = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center border border-gray-300 hover:border-indigo-500 transition-all duration-300 animate-scale-in">
+            {/* <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center border border-gray-300 hover:border-indigo-500 transition-all duration-300 animate-scale-in">
               <div className="text-center text-gray-600">
                 <div className="font-medium text-lg mb-1">Dhulikhel, Kavre</div>
                 <div className="text-sm">Kathmandu University Campus</div>
               </div>
-            </div>
+            </div> */}
+
+<div
+  className="rounded-xl h-64 flex items-center justify-center border border-gray-300 
+             hover:border-indigo-500 transition-all duration-300 animate-scale-in 
+             bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: "url('public/Kathmandu_University.jpg')" }}
+>
+  <div className="text-center text-white bg-black/40 px-4 py-2 rounded-lg">
+    <div className="font-medium text-lg mb-1">Dhulikhel, Kavre</div>
+    <div className="text-sm">Kathmandu University Campus</div>
+  </div>
+</div>
+
+
 
             {/* Partnership Inquiry */}
             <div
