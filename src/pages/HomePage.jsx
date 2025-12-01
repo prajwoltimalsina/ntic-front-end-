@@ -800,7 +800,7 @@ const whyNticItems = [
       "Guidance from professors and industry specialists",
       "Opportunities to publish and showcase findings",
     ],
-    image: "src/img/carousel5.jpg",
+    image: "public/carousel5.jpg",
   },
   {
     title: "🧪 2. Advanced Laboratories & Equipment",
@@ -823,7 +823,7 @@ const whyNticItems = [
       "Access to mentors from partner companies",
       "Intern-to-hire pipelines for top performers",
     ],
-    image: "src/img/carousel10.jpg",
+    image: "public/carousel10.jpg",
   },
   {
     title: "🚀 4. Startup Incubation & Prototype Support",
@@ -856,7 +856,7 @@ const whyNticItems = [
       "Weekly office hours and demo sessions",
       "Peer-to-peer learning communities",
     ],
-    image: "src/img/carousel9.jpg",
+    image: "public/carousel9.jpg",
   },
 ];
 
@@ -867,7 +867,7 @@ export const HomePage = ({ navigateTo }) => {
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="/public/NTIC-video.mp4"
+          src="/NTIC-video.mp4"
           autoPlay
           loop
           muted

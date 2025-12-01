@@ -3,22 +3,22 @@ export const NTICFamilyPage = () => {
     {
       name: "Prof.Dr.Bhim Shrestha",
       position: "Director, NTIC",
-      img: "src/img/bim.jpeg",
+      img: "/bim.jpeg",
     },
     {
       name: "Ujwol Thapa",
       position: "Program Coordinator",
-      img: "src/img/ujjwal.jpg",
+      img: "/ujjwal.jpg",
     },
     {
       name: "Aashish Dawadi",
       position: "Research Engineer",
-      img: "src/img/aashish.jpg",
+      img: "/aashish.jpg",
     },
     {
       name: "Yamraj Oli",
       position: "Research Engineer",
-      img: "src/img/Yamraj.jpg",
+      img: "public/Yamraj.jpg",
     },
    
   ];
