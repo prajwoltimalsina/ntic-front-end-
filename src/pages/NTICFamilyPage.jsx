@@ -18,7 +18,7 @@ export const NTICFamilyPage = () => {
     {
       name: "Yamraj Oli",
       position: "Research Engineer",
-      img: "public/Yamraj.jpg",
+      img: "/Yamraj.jpg",
     },
    
   ];

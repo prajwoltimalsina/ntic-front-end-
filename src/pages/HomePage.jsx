@@ -800,7 +800,7 @@ const whyNticItems = [
       "Guidance from professors and industry specialists",
       "Opportunities to publish and showcase findings",
     ],
-    image: "public/carousel5.jpg",
+    image: "/carousel5.jpg",
   },
   {
     title: "🧪 2. Advanced Laboratories & Equipment",
@@ -823,7 +823,7 @@ const whyNticItems = [
       "Access to mentors from partner companies",
       "Intern-to-hire pipelines for top performers",
     ],
-    image: "public/carousel10.jpg",
+    image: "/carousel10.jpg",
   },
   {
     title: "🚀 4. Startup Incubation & Prototype Support",
@@ -856,7 +856,7 @@ const whyNticItems = [
       "Weekly office hours and demo sessions",
       "Peer-to-peer learning communities",
     ],
-    image: "public/carousel9.jpg",
+    image: "/carousel9.jpg",
   },
 ];
 
@@ -1004,7 +1004,7 @@ export const HomePage = ({ navigateTo }) => {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
             <img
-              src="public/Organogram_NTIC.png"      
+              src="/Organogram_NTIC.png"      
               alt="Organogram of NTIC"
               className="relative w-full max-w-5xl rounded-3xl shadow-2xl border-4 border-white"
             />
@@ -1067,7 +1067,7 @@ export const HomePage = ({ navigateTo }) => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
                 <img
-                  src="src/img/download.jpg"
+                  src="/download.jpg"
                   alt="Director"
                   className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-2xl border-8 border-white"
                 />
